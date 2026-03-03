@@ -48,3 +48,35 @@ aramaCubugu.value = "JavaScript DOM Dersleri";
 const orijinalKart = document.querySelector(".meyve-karti");
 const kopyaKart = orijinalKart.cloneNode(true);
 document.querySelector(".sepet-ozeti").appendChild(kopyaKart);
+
+
+
+// 
+const anaMenu = document.querySelector(".nav-list");
+anaMenu.insertAdjacentHTML("afterbegin", "<li><a href='#'>Giriş</a></li>"); 
+
+//
+const eskiButon = document.querySelector("#eski-gonder-btn");
+const yeniButon = document.createElement("button");
+yeniButon.textContent = "Güncel Gönder";
+eskiButon.replaceWith(yeniButon);
+
+// 
+const fragman = document.createDocumentFragment();
+for(let i=1; i<=3; i++) {
+    const li = document.createElement("li");
+    li.textContent = `Hızlı Seçenek ${i}`;
+    fragman.appendChild(li);
+}
+document.querySelector(".hizli-menu").appendChild(fragman);
+
+//  dinamik Inline stil atama
+
+const ilerlemeCubugu = document.querySelector(".progress-bar");
+ilerlemeCubugu.style.width = "75%";
+ilerlemeCubugu.style.backgroundColor = "#4CAF50";
+
+//Metadata Atama
+const urunResmi = document.querySelector(".product-img");
+urunResmi.dataset.productId = "101";
+urunResmi.dataset.category = "elektronik";

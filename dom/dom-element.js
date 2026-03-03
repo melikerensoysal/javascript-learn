@@ -27,3 +27,23 @@ const tumGorseller = document.getElementsByTagName("img");
 
 // 
 const profilIsmi = document.querySelector(".profil-karti .isim-alani h2");
+
+// data attribute 
+const hedefSekme = document.querySelector('[data-tab-target="#anasayfa"]');
+
+
+// 
+const silmeButonu = document.querySelector(".cop-kutusu-ikonu");
+const anaKart = silmeButonu.closest(".kullanici-karti");
+
+// nextElementSibling
+const aktifBaslik = document.querySelector(".aktif-bolum");
+const sonrakiIcerik = aktifBaslik.nextElementSibling;
+
+// OR mantığı
+const tumBasliklar = document.querySelectorAll("h1, h2, .alt-baslik");
+
+
+// 
+const anaListe = document.querySelector("#kategori-grubu");
+const sadeceListeOgeleri = anaListe.children;
