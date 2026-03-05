@@ -60,3 +60,36 @@ urunKarti.addEventListener("dblclick", () => {
 window.addEventListener("resize", () => {
     console.log(`Yeni pencere genişliği: ${window.innerWidth}px`);
 });
+
+
+// 
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("DOM ağacı tamamen yüklendi, artık güvenle eleman seçebiliriz!");
+});
+
+
+
+// 
+const listeKapsayici = document.querySelector(".dinamik-liste");
+listeKapsayici.addEventListener("click", (e) => {
+    if (e.target.matches("li")) {
+        console.log("Tıklanan liste öğesi: " + e.target.textContent);
+    }
+});
+
+// once parametresi 
+const hediyeButonu = document.querySelector("#hediye-al-btn");
+hediyeButonu.addEventListener("click", () => {
+    alert("Tebrikler! İlk tıklama bonusunu aldınız.");
+}, { once: true });
+
+//Seçim Menüleri ve Checkbox
+const dilSecimi = document.querySelector("#dil-secici");
+dilSecimi.addEventListener("change", (e) => {
+    console.log("Seçilen yeni dil: " + e.target.value);
+});
+
+// copy yakalar
+window.addEventListener("copy", () => {
+    console.warn("Dikkat: Sayfadan bir içerik kopyalandı!");
+});
