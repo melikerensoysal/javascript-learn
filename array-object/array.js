@@ -74,3 +74,51 @@ const sonMesaj = kutu.pop();
 // 
 const favoriler = ["siyah", "beyaz", "yeşil"];
 const kopyaFavoriler = favoriler.slice();
+
+
+//
+const currentTeam = ["jett", "omen", "killjoy"];
+currentTeam.push("reyna", "sage"); 
+
+// 
+const openTabs = ["github.com", "stackoverflow.com", "youtube.com"];
+const closedTab = openTabs.pop(); 
+
+// 
+const allProducts = ["klavye", "mouse", "kulaklık", "monitör", "mousepad"];
+const featured = allProducts.slice(0, 3); 
+
+
+//
+const myHits = ["yağmurlar", "mayın tarlası", "sigara"];
+myHits.splice(1, 1, "dardayım"); 
+
+
+//
+const todoList = ["kod yaz"];
+todoList.push("markete git", "kediyi besle");
+
+
+// 
+const pathParts = ["projects", "web", "assets", "logo.png"];
+const fileName = pathParts.slice(-1); 
+
+
+
+const ilk11 = ["talisca", "asensio", "ederson", "skriniar"];
+ilk11.splice(2, 1); 
+
+
+// 
+const pageHistory = ["ana sayfa", "ürünler", "iletişim"];
+pageHistory.pop();
+
+
+//
+const feed = ["post 1", "post 2", "post 3"];
+feed.splice(1, 0, " kampanyayı kaçırma!"); 
+
+
+
+const highScores = [9500, 8200, 7500];
+const backupScores = highScores.slice(); 
