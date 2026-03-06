@@ -57,3 +57,48 @@ function yuruyusYap(adimBoyu) {
     let toplamMesafe = 0;
     return () => { toplamMesafe += adimBoyu; return toplamMesafe; };
 }
+
+
+// 
+function vergiHesapla(oran) {
+    return (fiyat) => fiyat + (fiyat * oran / 100);
+}
+const kdvYuzdeYirmi = vergiHesapla(20);
+
+// 
+function hedefBelirle(hedefMiktar) {
+    let biriken = 0;
+    return (eklenen) => { 
+        biriken += eklenen; 
+        return biriken >= hedefMiktar ? "Hedefe ulaşıldı!" : `Kalan: ${hedefMiktar - biriken}`; 
+    };
+}
+const telefonParasi = hedefBelirle(40000);
+
+//
+function cumleOlustur() {
+    let cumle = "";
+    return (kelime) => { 
+        cumle += kelime + " "; 
+        return cumle.trim(); 
+    };
+}
+const hikayeYaz = cumleOlustur();
+
+// 
+function sansurUygula(yasakliKelime) {
+    return (metin) => metin.split(yasakliKelime).join("***");
+}
+const kufurFiltresi = sansurUygula("salak");
+
+// 
+function sesKontrol(baslangicSesi) {
+    let ses = baslangicSesi;
+    return (degisim) => { 
+        ses += degisim; 
+        if(ses > 100) ses = 100;
+        if(ses < 0) ses = 0;
+        return `Ses seviyesi: ${ses}`; 
+    };
+}
+const tvSes = sesKontrol(30);
